@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+		<head>
+				<meta charset="utf-8"/>
+				<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+				<meta name="viewport" content="width=device-width, initial-scale=1"/>
+				<title>Hala2016</title>
+				<meta name="keywords" content="Jeager Learning Bootstrap"/> <!--Define keywords for search engines -->
+				<meta name="description" content="Prototype on my Bootstrap"/> <!--Define a description of your web page -->
+				<meta name="author" content="Rhean Manalo"/> <!--Define the author of a page -->	
+				<link href="css/bootstrap.min.css" rel="stylesheet"/>
+			
+<style>
+body{
+   background:#00cbff !important;
+}
+</style>
+		</head>
+
+	<body>
+<script>
+  function testAPI() {
+    console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me', function(response) {
+      console.log('Successful login for: ' + response.name);
+      document.getElementById('status').innerHTML =
+        'Thanks for logging in, ' + response.name + '!';
+        
+    });
+  }	
+  function logout(){
+  
+    FB.logout(function(response) {
+       location.href="index.html"
+    });
+  
+  }	
+  // This is called with the results from from FB.getLoginStatus().
+	</script>	
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+     
+	  
+    </div>
+  </div>
+</nav>	
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-ruble"></span>inoy Halalan<small>2k16</small></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li id="status"></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container">
+<button onclick="logout()">LogOut</button>
+<h1>Home</h1>
+</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery-2.1.4.min.js"></script>
+	</body>
+</html>
